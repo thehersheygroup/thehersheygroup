@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — The Hershey Group Inc.</title>
+  <meta name="description" content="Contact The Hershey Group for a custom quote on bags, packaging, and promotional products. Response within 24 hours." />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Contact Us Today</h1>
+    <p>Let's work together to start moving your business in the right direction.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Contact Info -->
+      <div class="reveal">
+        <h3>Get in Touch</h3>
+
+        <div class="contact-detail">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div class="contact-detail-text">
+            <strong>Address</strong>
+            <span>The Hershey Group<br>2010-A New Garden Road<br>Greensboro, NC 27410</span>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          </div>
+          <div class="contact-detail-text">
+            <strong>Phone</strong>
+            <span><a href="tel:3368553888">(336) 855-3888</a></span>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </div>
+          <div class="contact-detail-text">
+            <strong>Email</strong>
+            <span><a href="mailto:sales@thehersheygroup.com">sales@thehersheygroup.com</a></span>
+          </div>
+        </div>
+
+        <div style="margin-top:32px;padding:24px;background:var(--light);border-radius:6px;">
+          <h4 style="color:var(--navy);margin-bottom:8px">Response Time</h4>
+          <p style="font-size:16px;color:var(--muted);margin:0">We respond to all inquiries within <strong>24 hours</strong> on business days. For urgent requests, please call us directly.</p>
+        </div>
+
+        <div style="margin-top:24px;padding:24px;background:var(--light);border-radius:6px;">
+          <h4 style="color:var(--navy);margin-bottom:8px">We Work Through Distributors</h4>
+          <p style="font-size:16px;color:var(--muted);margin:0">We only work through distributors and do not sell direct to end consumers.</p>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form reveal" style="transition-delay:0.1s">
+        <h3>Send Us a Message</h3>
+
+        <!--
+          EMAILJS SETUP INSTRUCTIONS:
+          1. Create a free account at emailjs.com
+          2. Add an Email Service (Gmail, Outlook, etc.)
+          3. Create an Email Template with variables: {{from_name}}, {{from_email}}, {{subject}}, {{message}}
+          4. Get your Public Key from Account > API Keys
+          5. Replace the three placeholder values below:
+             - YOUR_PUBLIC_KEY
+             - YOUR_SERVICE_ID
+             - YOUR_TEMPLATE_ID
+        -->
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="from_name">Your Name <span style="color:red">*</span></label>
+            <input type="text" id="from_name" name="from_name" placeholder="Jane Smith" required />
+          </div>
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" placeholder="Acme Distributors" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="from_email">Email Address <span style="color:red">*</span></label>
+            <input type="email" id="from_email" name="from_email" placeholder="jane@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject <span style="color:red">*</span></label>
+          <input type="text" id="subject" name="subject" placeholder="Quote Request — Custom Tote Bags" required />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message <span style="color:red">*</span></label>
+          <textarea id="message" name="message" rows="6" placeholder="Please describe the product you're looking for, approximate quantity, and any specific requirements..." required></textarea>
+        </div>
+
+        <button type="button" id="sendBtn" class="btn btn-primary" style="width:100%;justify-content:center;display:flex;align-items:center;gap:8px">
+          <span id="btnText">Send Message</span>
+          <svg id="btnSpinner" style="display:none;animation:spin 0.8s linear infinite;width:18px;height:18px" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><circle cx="12" cy="12" r="10" stroke-opacity="0.3"/><path d="M12 2a10 10 0 0 1 10 10"/></svg>
+        </button>
+
+        <div id="formStatus" class="form-status"></div>
+
+        <p style="font-size:13px;color:var(--muted);margin-top:16px;margin-bottom:0">
+          * Required fields. We'll get back to you within 24 hours.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Map placeholder -->
+<div style="background:var(--light);padding:48px 0;">
+  <div class="container">
+    <div style="background:var(--mid);border-radius:8px;height:300px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;color:var(--muted)">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="var(--blue)"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      <strong style="color:var(--navy)">2010-A New Garden Road, Greensboro, NC 27410</strong>
+      <a href="https://maps.google.com/?q=2010-A+New+Garden+Road+Greensboro+NC+27410"
+         target="_blank" rel="noopener" class="btn btn-outline-dark" style="margin-top:4px;font-size:15px;padding:8px 20px">
+        Open in Google Maps
+      </a>
+    </div>
+  </div>
+</div>
+
+<div id="site-footer"></div>
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+  // ── EmailJS Configuration ──────────────────────────────────
+  // Replace these three values with your EmailJS credentials:
+  const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';   // Account > API Keys
+  const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';   // Email Services tab
+  const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';  // Email Templates tab
+  // ──────────────────────────────────────────────────────────
+
+  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
+  document.getElementById('sendBtn').addEventListener('click', async () => {
+    const name    = document.getElementById('from_name').value.trim();
+    const email   = document.getElementById('from_email').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const status  = document.getElementById('formStatus');
+
+    if (!name || !email || !subject || !message) {
+      status.className = 'form-status error';
+      status.textContent = 'Please fill in all required fields.';
+      return;
+    }
+
+    const btn      = document.getElementById('sendBtn');
+    const btnText  = document.getElementById('btnText');
+    const spinner  = document.getElementById('btnSpinner');
+
+    btn.disabled   = true;
+    btnText.textContent = 'Sending…';
+    spinner.style.display = 'block';
+    status.className = 'form-status';
+    status.textContent = '';
+
+    const params = {
+      from_name:  name,
+      from_email: email,
+      company:    document.getElementById('company').value.trim(),
+      phone:      document.getElementById('phone').value.trim(),
+      subject:    subject,
+      message:    message,
+      to_email:   'sales@thehersheygroup.com'
+    };
+
+    try {
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params);
+      status.className = 'form-status success';
+      status.textContent = 'Your message was sent successfully! We\'ll be in touch within 24 hours.';
+      ['from_name','company','from_email','phone','subject','message'].forEach(id => {
+        document.getElementById(id).value = '';
+      });
+    } catch (err) {
+      console.error('EmailJS error:', err);
+      status.className = 'form-status error';
+      status.textContent = 'Something went wrong. Please email us directly at sales@thehersheygroup.com.';
+    } finally {
+      btn.disabled = false;
+      btnText.textContent = 'Send Message';
+      spinner.style.display = 'none';
+    }
+  });
+
+  // Fix nav/footer paths
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('#site-header a[href^="/"], #site-footer a[href^="/"]').forEach(a => {
+      a.href = a.getAttribute('href').replace(/^\//, '../');
+    });
+  });
+</script>
+<style>
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+<script src="../js/shared.js"></script>
+</body>
+</html>

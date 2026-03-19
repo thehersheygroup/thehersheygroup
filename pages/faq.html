@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ — The Hershey Group Inc.</title>
+  <meta name="description" content="Frequently asked questions about The Hershey Group's custom promotional product services, pricing, lead times, and ordering process." />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Frequently Asked Questions</h1>
+    <p>Answers to the most common questions about working with The Hershey Group.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width:800px">
+
+    <div class="reveal">
+
+      <div class="faq-item">
+        <button class="faq-question">What types of products does The Hershey Group specialize in?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            We specialize in custom made bags, packaging, and promotional items. Our most popular categories include bags and totes, customized branded products, custom electronics and tech accessories, and bar-related items like drinkware and barware. If you have a product in mind that isn't listed, reach out — we can source and manufacture almost anything.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Do you sell directly to end consumers?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            No — we only work through distributors. We do not sell direct to end consumers or retail buyers. If you're a distributor or work in the promotional products industry, we'd love to work with you.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">How quickly can I get a quote?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            We pride ourselves on fast turnaround — most quotes are returned within 24 hours. Our quotes are all-inclusive, meaning they cover freight, duties, QC/safety testing, and all inland freight to your required destination. No hidden fees.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">What does the quote include?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            All quotes from The Hershey Group include every cost associated with getting your product to your door: product cost, freight (ocean or air), import duties, QC and safety testing fees, and inland freight to your destination. What you see is what you pay.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">What are your typical lead times for custom orders?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Lead times vary depending on product type, quantity, and whether samples are required. We'll provide a specific timeline as part of your quote. Ocean freight orders typically take longer than air freight, but we'll always present options that fit your timeline and budget.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Do you offer custom design and 3D renderings?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Yes — our team can walk you through the entire design process. We provide custom 3D renderings so you can visualize your product before production begins, along with material samples to confirm design and materials. We work collaboratively to make sure you get exactly what you're envisioning.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">How do you handle quality control?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Quality control is built into every order. We coordinate QC inspections at the factory, manage safety testing and CPSIA compliance, and oversee all production details. You'll receive updates throughout the process, including photos from production when applicable.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Do you offer warehousing or drop-ship services?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Yes, upon request we can provide fulfillment, warehousing, and drop-ship services. Contact us to discuss your specific logistics needs and we'll find a solution that works for your program.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Where are your factories located?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            We work primarily with overseas factories, predominantly in Asia. We have long-standing relationships with our manufacturing partners and treat them as we treat our clients — as partners, not just vendors. This approach ensures consistency, quality, and transparency throughout production.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">How do I get started?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Simply reach out to us via the <a href="contact.html">Contact page</a>, by phone at <a href="tel:3368553888">(336) 855-3888</a>, or by email at <a href="mailto:sales@thehersheygroup.com">sales@thehersheygroup.com</a>. Tell us what you're looking for and we'll get back to you with a quote within 24 hours.
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Still have questions? -->
+    <div class="reveal" style="margin-top:56px;text-align:center;padding:40px;background:var(--light);border-radius:8px;">
+      <h3 style="color:var(--navy);margin-bottom:8px">Still have questions?</h3>
+      <p style="color:var(--muted);margin-bottom:24px">We're happy to answer any questions not covered here.</p>
+      <a href="contact.html" class="btn btn-primary">Contact Us</a>
+    </div>
+
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="../js/shared.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('#site-header a[href^="/"], #site-footer a[href^="/"]').forEach(a => {
+      a.href = a.getAttribute('href').replace(/^\//, '../');
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  });
+</script>
+</body>
+</html>
