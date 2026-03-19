@@ -1,4 +1,6 @@
 // shared.js — injects header and footer into every page
+// BASE PATH: change this to '' (empty string) once a custom domain is connected
+const BASE = '/thehersheygroup';
 
 const HEADER_HTML = `
 <div class="topbar">
@@ -9,7 +11,7 @@ const HEADER_HTML = `
 </div>
 <header class="site-header">
   <div class="header-inner">
-    <a class="site-logo" href="/index.html">
+    <a class="site-logo" href="${BASE}/index.html">
       <img src="https://thehersheygroup.com/wp-content/uploads/2019/06/THG-Letterhead-Version.png"
            alt="The Hershey Group Inc." />
     </a>
@@ -17,20 +19,20 @@ const HEADER_HTML = `
       <span></span><span></span><span></span>
     </button>
     <ul class="site-nav" id="siteNav">
-      <li><a href="/pages/about.html">About Us</a></li>
-      <li><a href="/pages/services.html">Services</a></li>
+      <li><a href="${BASE}/pages/about.html">About Us</a></li>
+      <li><a href="${BASE}/pages/services.html">Services</a></li>
       <li class="dropdown">
         <a href="#">Portfolio ▾</a>
         <ul class="dropdown-menu">
-          <li><a href="/pages/portfolio.html">All Products</a></li>
-          <li><a href="/pages/portfolio.html#customized">Customized Products</a></li>
-          <li><a href="/pages/portfolio.html#bags">Bags and Totes</a></li>
-          <li><a href="/pages/portfolio.html#electronics">Custom Electronics</a></li>
-          <li><a href="/pages/portfolio.html#bar">Bar Related Items</a></li>
+          <li><a href="${BASE}/pages/portfolio.html">All Products</a></li>
+          <li><a href="${BASE}/pages/portfolio.html#customized">Customized Products</a></li>
+          <li><a href="${BASE}/pages/portfolio.html#bags">Bags and Totes</a></li>
+          <li><a href="${BASE}/pages/portfolio.html#electronics">Custom Electronics</a></li>
+          <li><a href="${BASE}/pages/portfolio.html#bar">Bar Related Items</a></li>
         </ul>
       </li>
-      <li><a href="/pages/faq.html">FAQ's</a></li>
-      <li><a href="/pages/contact.html" class="nav-cta">Contact Us Today</a></li>
+      <li><a href="${BASE}/pages/faq.html">FAQ's</a></li>
+      <li><a href="${BASE}/pages/contact.html" class="nav-cta">Contact Us Today</a></li>
     </ul>
   </div>
 </header>
@@ -53,12 +55,12 @@ const FOOTER_HTML = `
       <div class="footer-col">
         <h4>Navigation</h4>
         <ul class="footer-links">
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/pages/about.html">About Us</a></li>
-          <li><a href="/pages/services.html">Services</a></li>
-          <li><a href="/pages/portfolio.html">Portfolio</a></li>
-          <li><a href="/pages/faq.html">FAQ's</a></li>
-          <li><a href="/pages/contact.html">Contact Us</a></li>
+          <li><a href="${BASE}/index.html">Home</a></li>
+          <li><a href="${BASE}/pages/about.html">About Us</a></li>
+          <li><a href="${BASE}/pages/services.html">Services</a></li>
+          <li><a href="${BASE}/pages/portfolio.html">Portfolio</a></li>
+          <li><a href="${BASE}/pages/faq.html">FAQ's</a></li>
+          <li><a href="${BASE}/pages/contact.html">Contact Us</a></li>
         </ul>
       </div>
       <div class="footer-col footer-contact">
@@ -89,8 +91,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Highlight active nav link
   const path = window.location.pathname;
   document.querySelectorAll('.site-nav a').forEach(a => {
-    if (a.getAttribute('href') === path ||
-        (path.includes(a.getAttribute('href')) && a.getAttribute('href') !== '/index.html')) {
+    const href = a.getAttribute('href');
+    if (href && href !== BASE + '/index.html' && path.includes(href.replace(BASE, ''))) {
       a.style.color = 'var(--blue)';
     }
   });
@@ -100,6 +102,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const nav    = document.getElementById('siteNav');
   if (toggle && nav) {
     toggle.addEventListener('click', () => nav.classList.toggle('open'));
+    nav.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => nav.classList.remove('open'));
+    });
   }
 
   // Scroll reveal
